@@ -41,8 +41,6 @@ String Senses_NBIoT::send(String userid, String key, int slotnum, float data){
   _packet += ":";
   _packet += String(_data);
 
-  Serial.println(_packet);
-
   UDPSend udp = AISnb.sendUDPmsgStr(Senses_NBIoT_HOST, Senses_NBIoT_PORT, _packet);
   return "OK";
 
@@ -154,4 +152,3 @@ String Senses_NBIoT::getControlbySwitch(String userid, String key, int swnum){
   return _ctlstatus;
 }
 */
-
